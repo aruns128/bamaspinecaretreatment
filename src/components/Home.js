@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SEO from "./SEO";
+import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,9 +19,15 @@ const Home = () => {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen p-4 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/sample_image_1.jpg')" }} // Set the background image
+      className="flex items-center justify-center min-h-screen p-4 bg-cover bg-center relative"
+      style={{
+        backgroundImage: "url('/images/hero_section.jpeg')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
     >
+      <div className="absolute inset-0 bg-black opacity-40" />{" "}
+      {/* Background overlay */}
       <SEO
         title="Dr. Bama Spine Care - Trusted Spine Treatment"
         description="Dr. Bama Spine Care offers effective spine care treatments in Ernakulam, specializing in back pain and spine disorders."
@@ -28,37 +35,53 @@ const Home = () => {
         canonical="https://www.drbamaspinecare.com"
       />
       <motion.div
-        className="bg-white rounded-3xl p-8 shadow-xl shadow-gray-300 w-full max-w-4xl text-center"
-        initial={{ opacity: 0, y: 50 }} // Initial state (hidden and below)
-        animate={{ opacity: 1, y: 0 }} // End state (visible and centered)
-        transition={{ duration: 1 }} // Transition duration
+        className="rounded-3xl p-8 w-full max-w-4xl text-center relative z-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
         {/* Animated Title */}
-        <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-gray-700 flex justify-center">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-[#fff] flex justify-center text-shadow-lg">
           {title.split("").map((char, index) => (
             <motion.span
               key={index}
-              custom={index} // Custom index for staggered animation
+              custom={index}
               variants={letterAnimation}
               initial="hidden"
               animate="visible"
               className="inline-block"
             >
-              {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
+              {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
         </h2>
-        <p className="text-lg text-gray-600 mb-6">
-          Comprehensive care and innovative treatment solutions for your spine
-          health.
+        <p className="text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
+          Back pain, Knee pain, Disc bulge, Disc Prolapse , Listhesis, Stenosis,
+          Scoliosis?
         </p>
-        <motion.button
-          className="px-6 py-3 bg-[#025a60] text-white rounded-full shadow-lg shadow-[#025a60] hover:scale-105 transition-all"
-          whileHover={{ scale: 1.1 }} // Hover effect to scale the button
+        <p className="text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
+          100% guaranteed treatment.
+        </p>
+        <p className="text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
+          Feel the difference within 15 minutes.
+        </p>
+
+        {/* Explore Services with Hover Effect */}
+        <motion.div
+          className="inline-block text-[#fff] font-bold cursor-pointer"
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: "#025a60",
+            color: "#fff",
+            padding: "0.5rem 1.5rem",
+            borderRadius: "1rem",
+            transition: { duration: 0.3 },
+          }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => navigate("/services")}
         >
-          Explore Our Services
-        </motion.button>
+          Explore Our Services <FaArrowRight className="inline-block ml-2" />
+        </motion.div>
       </motion.div>
     </div>
   );
