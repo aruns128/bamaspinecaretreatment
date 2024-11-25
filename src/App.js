@@ -14,7 +14,6 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import Home from "./components/Home";
-import About from "./components/About";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
@@ -77,22 +76,6 @@ function App() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Who we are ?
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
                 <NavLink
@@ -122,7 +105,6 @@ function App() {
                   Blog
                 </NavLink>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -177,22 +159,6 @@ function App() {
                   }
                 >
                   Home
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Who we are ?
                 </NavLink>
               </motion.div>
               <motion.div
@@ -267,7 +233,6 @@ function App() {
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
@@ -282,9 +247,6 @@ function App() {
             <div className="flex flex-wrap justify-center lg:justify-start space-x-4 space-y-2 lg:space-y-0 mb-4 lg:mb-0 items-center font-semibold">
               <NavLink to="/" className="text-xs py-2 px-4">
                 Home
-              </NavLink>
-              <NavLink to="/about" className="text-xs py-2 px-4">
-                About Us
               </NavLink>
               <NavLink to="/services" className="text-xs py-2 px-4">
                 Services

@@ -71,7 +71,7 @@ const Blog = () => {
                   </div>
                   <div className="flex justify-center items-center">
                     <img
-                      src={"/images/sample_image_1.jpg"}
+                      src={post.image}
                       alt={post.title}
                       className="w-auto h-80 rounded-lg"
                     />

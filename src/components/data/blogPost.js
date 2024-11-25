@@ -15,7 +15,7 @@ export const blogPosts = [
     id: 1,
     title: "Understanding Spine Anatomy: The Basics",
     icon: <FaUserMd className="w-6 h-6 text-[#f3b700]" />,
-    image: "/images/spine-anatomy.jpg",
+    image: "/images/sample_image_1.jpg",
     introduction:
       "An overview of spine anatomy and its role in overall health.",
     description:
@@ -42,7 +42,7 @@ export const blogPosts = [
     id: 2,
     title: "Common Spine Disorders and How to Prevent Them",
     icon: <FaStethoscope className="w-6 h-6 text-[#f5a623]" />,
-    image: "/images/spine-disorders.jpg",
+    image: "/images/sample_image_2.jpg",
     introduction:
       "A look at common spine disorders, their causes, and prevention tips.",
     description:
@@ -69,7 +69,7 @@ export const blogPosts = [
     id: 3,
     title: "The Role of Physical Therapy in Spine Care",
     icon: <FaWheelchair className="w-6 h-6 text-[#ff7043]" />,
-    image: "/images/physical-therapy.jpg",
+    image: "/images/sample_image_3.jpg",
     introduction:
       "How physical therapy can help manage and prevent spine-related issues.",
     description:
@@ -96,7 +96,7 @@ export const blogPosts = [
     id: 4,
     title: "Spine Surgery: When Is It Necessary?",
     icon: <FaMedkit className="w-6 h-6 text-[#f44336]" />,
-    image: "/images/spine-surgery.jpg",
+    image: "/images/sample_image_4.jpg",
     introduction:
       "When conservative treatments don't work, spine surgery may be an option.",
     description:
@@ -123,7 +123,7 @@ export const blogPosts = [
     id: 5,
     title: "Innovations in Spine Care Technology",
     icon: <FaWalking className="w-6 h-6 text-[#ff9800]" />,
-    image: "/images/spine-technology.jpg",
+    image: "/images/sample_image_5.jpg",
     introduction:
       "Advancements in technology are transforming spine care treatment.",
     description:
@@ -150,7 +150,7 @@ export const blogPosts = [
     id: 6,
     title: "The Importance of Posture for Spine Health",
     icon: <MdHealthAndSafety className="w-6 h-6 text-[#4caf50]" />,
-    image: "/images/spine-posture.jpg",
+    image: "/images/sample_image_6.jpg",
     introduction:
       "How maintaining good posture can prevent long-term spine problems.",
     description:
@@ -177,7 +177,7 @@ export const blogPosts = [
     id: 7,
     title: "Spine Care for Seniors: Maintaining Mobility and Flexibility",
     icon: <BiFirstAid className="w-6 h-6 text-[#2196f3]" />,
-    image: "/images/senior-spine-care.jpg",
+    image: "/images/sample_image_7.jpg",
     introduction:
       "As we age, spine health becomes more important. This post focuses on how seniors can maintain spine health.",
     description:
@@ -204,7 +204,7 @@ export const blogPosts = [
     id: 8,
     title: "How Nutrition Affects Spine Health",
     icon: <FaHeartPulse className="w-6 h-6 text-[#ff5722]" />,
-    image: "/images/nutrition-spine.jpg",
+    image: "/images/sample_image_8.jpg",
     introduction:
       "The foods you eat play a crucial role in maintaining a healthy spine.",
     description:
@@ -231,7 +231,7 @@ export const blogPosts = [
     id: 9,
     title: "Managing Chronic Back Pain: Tips and Strategies",
     icon: <FaHandHoldingMedical className="w-6 h-6 text-[#9c27b0]" />,
-    image: "/images/chronic-back-pain.jpg",
+    image: "/images/sample_image_9.jpg",
     introduction:
       "Chronic back pain affects millions of people. Here's how to manage it effectively.",
     description:
@@ -259,7 +259,7 @@ export const blogPosts = [
     id: 10,
     title: "Ergonomics and Spine Health: A Guide for Office Workers",
     icon: <MdOutlineMonitorHeart className="w-6 h-6 text-[#e91e63]" />,
-    image: "/images/ergonomics-spine.jpg",
+    image: "/images/sample_image_10.jpg",
     introduction:
       "Long hours at a desk can harm your spine. This post covers ergonomics and their impact on spine health.",
     description:
