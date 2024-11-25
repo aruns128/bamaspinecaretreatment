@@ -84,13 +84,13 @@ const Home = () => {
           </h2>
           <p className="text-sm sm:text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
             Back pain, Knee pain, Disc bulge, Disc Prolapse , Listhesis,
-            Stenosis, Scoliosis?
+            Stenosis, Scoliosis.
           </p>
           <p className="text-sm sm:text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
             100% guaranteed treatment.
           </p>
           <p className="text-sm sm:text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
-            Feel the difference within 15 minutes.
+            With over 32 years of experience in spine care treatment
           </p>
 
           {/* Explore Services with Hover Effect */}

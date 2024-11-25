@@ -29,7 +29,7 @@ const About = () => {
           >
             <SEO
               title="Keral,Tamilnadu"
-              description="With over 30 years of experience in spine care treatment, we at Bama
+              description="With over 32 years of experience in spine care treatment, we at Bama
             Spine Care are dedicated to providing effective and personalized
             solutions for a wide range of spinal and musculoskeletal conditions.
             Our expertise lies in merging the ancient wisdom of Ayurveda with
@@ -38,7 +38,7 @@ const About = () => {
               keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
               canonical="https://www.drbamaspinecare.com/locations"
             />
-            With over 30 years of experience in spine care treatment, we at Bama
+            With over 32 years of experience in spine care treatment, we at Bama
             Spine Care are dedicated to providing effective and personalized
             solutions for a wide range of spinal and musculoskeletal conditions.
             Our expertise lies in merging the ancient wisdom of Ayurveda with
