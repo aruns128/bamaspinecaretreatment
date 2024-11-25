@@ -11,17 +11,9 @@ const Home = () => {
 
   // Array of image URLs
   const images = [
-    "/images/sample_image_1.jpg",
-    "/images/sample_image_2.jpg",
-    "/images/sample_image_3.jpg",
-    "/images/sample_image_4.jpg",
     "/images/sample_image_5.jpg",
     "/images/sample_image_6.jpg",
-    "/images/sample_image_7.jpg",
-    "/images/sample_image_8.jpg",
-    "/images/sample_image_9.jpg",
-    "/images/sample_image_10.jpg",
-    "/images/sample_image_11.jpg",
+    "/images/sample_image_2.jpg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
