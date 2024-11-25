@@ -107,6 +107,17 @@ const Services = () => {
           services={servicesGroup3}
         />
       </div>
+      <div className="mt-16 flex justify-center">
+        <div className="w-full max-w-4xl">
+          <iframe
+            src="https://www.youtube.com/embed/QV0JqnKRxIc?si=iS4zj9YWm-9W9pmC"
+            title="YouTube video player"
+            className="w-full aspect-video rounded-xl shadow-lg"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };

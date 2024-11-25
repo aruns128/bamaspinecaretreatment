@@ -89,10 +89,6 @@ const Home = () => {
           <p className="text-sm sm:text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
             100% guaranteed treatment.
           </p>
-          <p className="text-sm sm:text-lg text-[#fff] mb-1 font-semibold text-shadow-lg">
-            With over 32 years of experience in spine care treatment
-          </p>
-
           {/* Explore Services with Hover Effect */}
           <motion.div
             className="inline-block text-[#fff] font-bold cursor-pointer mt-4"
