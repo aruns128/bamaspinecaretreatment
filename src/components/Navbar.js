@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            src="/company-logo.jpg"
+            src="/company-logo.png"
             alt="Dr.Bama Spine Care"
             className="h-8 w-auto md:h-8 lg:h-12"
           />
