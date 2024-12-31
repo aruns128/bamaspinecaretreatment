@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import GoogleReviews from "./GoogleReview";
 import { ConditionsData as conditions, blogsData } from "./ConditionsData";
-import SEO from "./SEO";
+
 const Home = () => {
   const sliderRef = useRef(null);
   const navigate = useNavigate();
@@ -72,17 +72,6 @@ const Home = () => {
   return (
     <div>
       <section className="bg-gray-100 py-6 z-1 mt-24 relative">
-        <SEO
-          title="Dr. Bama Spine Care - Trusted Spine Treatment"
-          description="With over 32 years of experience in spine care treatment, we at Bama
-            Spine Care are dedicated to providing effective and personalized
-            solutions for a wide range of spinal and musculoskeletal conditions.
-            Our expertise lies in merging the ancient wisdom of Ayurveda with
-            the latest advancements in modern medical technology, ensuring that
-            our patients receive the highest standard of care."
-          keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
-          canonical="https://www.drbamaspinecare.com"
-        />
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
           {/* Left Custom Arrow */}
           <div className="absolute left-4 z-10 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 sm:left-2 hidden lg:flex">
