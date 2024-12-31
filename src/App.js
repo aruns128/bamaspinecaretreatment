@@ -1,246 +1,40 @@
-import React, { useState } from "react";
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
   NavLink,
 } from "react-router-dom";
-import {
-  FaBars,
-  FaWindowClose,
-  FaInstagram,
-  FaTwitter,
-  FaFacebook,
-} from "react-icons/fa";
-import { motion } from "framer-motion"; // Import motion from framer-motion
-import Home from "./components/Home";
-import Services from "./components/Services";
+import AboutUs from "./components/AboutUs";
+import ConditionsWeTreat from "./components/ConditionsWeTreat";
+import WhyUs from "./components/WhyUs";
 import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import BlogPost from "./components/BlogPost";
-import Locations from "./components/Locations";
+import LocateUs from "./components/Locations";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import { FaInstagram, FaStethoscope, FaFacebook } from "react-icons/fa";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        {/* Header */}
-        <header className="p-6 bg-gradient-to-r from-gray-500 via-[#025a60] to-[#7ad7de] shadow-lg text-white text-center flex items-center justify-center">
-          <NavLink to="/">
-            <img
-              src="/images/company-logo.jpg"
-              alt="Ayurveda Modern"
-              className="img-fluid"
-              style={{ maxWidth: "150px", height: "auto" }}
-            />
-          </NavLink>
-        </header>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
 
-        {/* Navigation */}
-        <nav className="p-4 bg-gray-200 shadow-inner">
-          <div className="flex justify-center items-center flex-col">
-            {/* Hamburger Button for Mobile */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="text-gray-700 focus:outline-none"
-              >
-                {!menuOpen ? (
-                  <FaBars className="w-6 h-6" color="#025a60" />
-                ) : (
-                  <FaWindowClose className="w-6 h-6" color="red" />
-                )}
-              </button>
-            </div>
+        {/* Main content */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/why_us" element={<WhyUs />} />
+            <Route path="/condition_we_treat" element={<ConditionsWeTreat />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/blogs" element={<Blog />} />
+            <Route path="/locations" element={<LocateUs />} />
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex space-x-6 font-bold">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Home
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Services
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Blog
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/locations"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Locations
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Contact Us
-                </NavLink>
-              </motion.div>
-            </div>
+            {/* ID-based routing */}
+            <Route path="/blogs/:id" element={<Blog />} />
+          </Routes>
+        </main>
 
-            {/* Mobile View Links (vertical stack) */}
-            <div
-              className={`lg:hidden ${
-                menuOpen ? "block" : "hidden"
-              } space-y-4 mt-4 w-full`}
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Home
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Services
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Blog
-                </NavLink>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/locations"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Locations
-                </NavLink>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-              >
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#025a60] text-white py-2 px-4 rounded-md block"
-                      : "text-lg text-gray-700 py-2 px-4 rounded-md block hover:bg-gray-300 transition-colors"
-                  }
-                >
-                  Contact Us
-                </NavLink>
-              </motion.div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/locations" element={<Locations />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-        </Routes>
-
-        {/* Footer Section */}
+        {/* Footer */}
         <footer className="bg-gray-500 text-white text-center py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center px-4">
             {/* Footer Navigation Links */}
@@ -248,14 +42,17 @@ function App() {
               <NavLink to="/" className="text-xs py-2 px-4">
                 Home
               </NavLink>
-              <NavLink to="/services" className="text-xs py-2 px-4">
-                Services
+              <NavLink to="/why_us" className="text-xs py-2 px-4">
+                Why us
               </NavLink>
-              <NavLink to="/blog" className="text-xs py-2 px-4">
-                Blog
+              <NavLink to="/condition_we_treat" className="text-xs py-2 px-4">
+                Condition we treat
               </NavLink>
-              <NavLink to="/contact" className="text-xs py-2 px-4">
-                Contact Us
+              <NavLink to="/about" className="text-xs py-2 px-4">
+                About
+              </NavLink>
+              <NavLink to="/blogs" className="text-xs py-2 px-4">
+                Blogs
               </NavLink>
               <NavLink to="/locations" className="text-xs py-2 px-4">
                 Locations
@@ -278,26 +75,26 @@ function App() {
             <div className="flex justify-center items-center space-x-4">
               <p className="text-xs">Follow Us</p>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/100087110217227/videos/healthy-spine-healthy-life/844309806698757/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-300 mx-2"
+                className="text-[#0866FF] hover:text-blue-500 mx-2"
               >
                 <FaFacebook className="w-4 h-4" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.practo.com/ernakulam/clinic/dr-bama-spine-care-ponnurunni/services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 mx-2"
+                className="text-[#28328c] hover:text-[#3f4bba] mx-2"
               >
-                <FaTwitter className="w-4 h-4" />
+                <FaStethoscope className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/dr.bama_spine_care/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-pink-500 hover:text-pink-300 mx-2"
+                className="text-pink-900 hover:text-pink-400 mx-2"
               >
                 <FaInstagram className="w-4 h-4" />
               </a>

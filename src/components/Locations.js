@@ -37,63 +37,35 @@ const locations = [
 
 const Locations = () => {
   return (
-    <section
-      id="contact"
-      className="py-10 px-4 bg-gradient-to-r from-[#fff4e6] to-[#ffede1]"
-    >
-      <div className="container mx-auto max-w-7xl">
-        <h2 className="text-center text-4xl font-bold text-gray-800 mb-10">
-          Locations
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          {locations.map((location, index) => (
-            <>
-              {/* For larger screens */}
-              <SEO
-                title={location.name}
-                description={location.address}
-                keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
-                canonical="https://www.drbamaspinecare.com/locations"
-              />
-              <div
-                key={index}
-                className="p-4 bg-white shadow-lg rounded-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 w-full max-w-sm mx-auto sm:max-w-md md:max-w-full lg:block hidden"
-              >
-                <iframe
-                  src={location.mapSrc}
-                  title={`Map of ${location.name}`}
-                  className="w-full h-48 sm:h-56 md:h-64 rounded-xl border-0 mb-4"
-                  allowFullScreen=""
-                  loading="lazy"
-                ></iframe>
-                <div className="text-center">
-                  <h3 className="text-base sm:text-lg md:text-2xl font-semibold text-gray-800 mb-2">
-                    {location.name}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-1">
-                    <strong>Address:</strong> {location.address}
-                  </p>
-                  <p className="text-sm sm:text-base text-gray-600 mb-1">
-                    <strong>Phone:</strong> {location.phone}
-                  </p>
-                  <p className="text-sm sm:text-base text-gray-600">
-                    <strong>Email:</strong> drbamaspine69@gmail.com
-                  </p>
-                </div>
-              </div>
-
-              {/* For smaller screens */}
-              <div key={index} className="lg:hidden">
-                <div className="p-4 bg-white shadow-lg rounded-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 w-full sm:w-5/6 mx-auto mb-6">
+    <div className="text-center text-2xl mt-24">
+      <section className="py-10 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-center text-4xl font-bold text-gray-800 mb-10">
+            Locations
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            {locations.map((location, index) => (
+              <>
+                {/* For larger screens */}
+                <SEO
+                  title={location.name}
+                  description={location.address}
+                  keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
+                  canonical="https://www.drbamaspinecare.com/locations"
+                />
+                <div
+                  key={index}
+                  className="p-4 bg-white shadow-lg rounded-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 w-full max-w-sm mx-auto sm:max-w-md md:max-w-full lg:block hidden"
+                >
                   <iframe
                     src={location.mapSrc}
                     title={`Map of ${location.name}`}
-                    className="w-full h-40 sm:h-48 md:h-56 rounded-xl border-0 mb-4"
+                    className="w-full h-48 sm:h-56 md:h-64 rounded-xl border-0 mb-4"
                     allowFullScreen=""
                     loading="lazy"
                   ></iframe>
                   <div className="text-center">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
+                    <h3 className="text-base sm:text-lg md:text-2xl font-semibold text-gray-800 mb-2">
                       {location.name}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-600 mb-1">
@@ -107,12 +79,39 @@ const Locations = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </>
-          ))}
+
+                {/* For smaller screens */}
+                <div key={index} className="lg:hidden">
+                  <div className="p-4 bg-white shadow-lg rounded-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-300 w-full sm:w-5/6 mx-auto mb-6">
+                    <iframe
+                      src={location.mapSrc}
+                      title={`Map of ${location.name}`}
+                      className="w-full h-40 sm:h-48 md:h-56 rounded-xl border-0 mb-4"
+                      allowFullScreen=""
+                      loading="lazy"
+                    ></iframe>
+                    <div className="text-center">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
+                        {location.name}
+                      </h3>
+                      <p className="text-sm sm:text-base text-gray-600 mb-1">
+                        <strong>Address:</strong> {location.address}
+                      </p>
+                      <p className="text-sm sm:text-base text-gray-600 mb-1">
+                        <strong>Phone:</strong> {location.phone}
+                      </p>
+                      <p className="text-sm sm:text-base text-gray-600">
+                        <strong>Email:</strong> drbamaspine69@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
