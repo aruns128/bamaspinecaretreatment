@@ -81,7 +81,7 @@ const Home = () => {
             the latest advancements in modern medical technology, ensuring that
             our patients receive the highest standard of care."
           keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
-          canonical="https://www.drbamaspinecare.com/locations"
+          canonical="https://www.drbamaspinecare.com"
         />
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
           {/* Left Custom Arrow */}

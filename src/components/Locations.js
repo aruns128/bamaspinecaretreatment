@@ -51,7 +51,7 @@ const Locations = () => {
                   title={location.name}
                   description={location.address}
                   keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
-                  canonical="https://www.drbamaspinecare.com/locations"
+                  canonical="https://www.drbamaspinecare.com"
                 />
                 <div
                   key={index}
