@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "./SEO";
 
 const locations = [
   {
@@ -46,6 +47,13 @@ const Locations = () => {
             {locations.map((location, index) => (
               <>
                 {/* For larger screens */}
+
+                <SEO
+                  title={location.name}
+                  description={location.address}
+                  keywords="spine care clinics, locations, Dr. Bama spine, back pain clinics"
+                  canonical="https://www.drbamaspinecare.com"
+                />
 
                 <div
                   key={index}
